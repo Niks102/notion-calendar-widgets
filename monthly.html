@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Calendar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        body:hover {
+            transform: scale(1.02);
+        }
+        
+        .widget {
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+        
+        .icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body onclick="openCalendar()">
+    <div class="widget">
+        <div class="icon">📅</div>
+        <div class="title">Monthly View</div>
+        <div class="subtitle">Click to open calendar</div>
+    </div>
+    
+    <script>
+        function openCalendar() {
+            // Replace YOUR_EMAIL with your Google Calendar email
+            const calendarEmail = 'YOUR_EMAIL@gmail.com';
+            const url = `https://calendar.google.com/calendar/u/0/r/month`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
